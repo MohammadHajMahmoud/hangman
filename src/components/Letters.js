@@ -6,7 +6,10 @@ export class Letters extends Component{
         return <div> 
            {Object.keys(this.props.letterStatus).map(letter => (
             <Letter
-              letter={letter}/>))}
+              letter={letter}
+              selectLetter={this.props.selectLetter}
+              className={this.props.letterStatus[letter] ? 'selected' : 'notSelected'}
+              />))}
         </div>
          
 }
